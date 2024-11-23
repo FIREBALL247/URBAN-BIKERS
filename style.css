@@ -1,0 +1,788 @@
+/* Google Fonts */
+
+/* Variables */
+/* :root {
+  --main-color: #ff4424;
+  --second-color: #f77214;
+  --text-color: #080a08;
+  --text-alter-color: #868e96;
+  --third-color: #fde628;
+  --bg-color: #fff;
+  --container-color: #faeee4;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script:wght@400..700&family=Funnel+Display:wght@300..800&family=Geist+Mono:wght@100..900&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700;900&family=Rock+Salt&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem ;
+  font-family:  "Rubik", serif;
+}
+
+.logo, .footer-box .logo{
+  font-size: 1.2rem;
+  font-family: "Sofia", serif;
+  color: black;
+  background-color: red;
+  padding:  0 5px;
+ 
+ 
+}
+
+.logo:hover, .footer-box .logo:hover{
+  background-color: rgb(247, 57, 57);
+  color: black;
+}
+
+img{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+section{
+  padding: 3rem 0 2rem;
+}
+
+
+.container{
+  max-width: 1060px;
+  width: 100%;
+  margin: auto;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: black;
+}
+
+
+
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+  }
+
+  .navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+  }
+
+
+  .nav-link{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .nav-link:hover{
+    background-color: white;
+    color: red;
+    transition: 0.3s;
+    padding: 5px 2px ;
+  }
+
+  .sign-up, .mobile-sign-up{
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+    background: red;
+    color: black;
+    text-transform: uppercase;
+  }
+
+
+  .sign-up:hover, .mobile-sign-up:hover{
+    background-color: rgb(247, 57, 57);
+    transition: 0.3s;
+
+  }
+  .mobile-sign-up{
+    display: none;
+  }
+
+  .hamburger{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+  }
+
+  .hamburger div{
+    display: block;
+    background-color:white;
+    height: 2px;
+    width: 24px;
+    transition: 0.3s;
+  }
+
+  .move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+
+  .move .line2{
+    opacity: 0;
+  }
+
+  .move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+
+  .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: red;
+    text-transform: uppercase;
+  }
+
+
+.heading h2{
+  font-size: 1.8rem;
+}
+
+.home{
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/pexels-rpnickson-2885326.jpg) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: right;
+
+}
+
+.home-box{
+ width: 60%;
+ position: relative;
+ left: 40%
+}
+
+.home-box h3{
+  text-transform: capitalize;
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-weight: bolder;
+  font-size: 25px;
+ 
+
+ 
+
+}
+.home-box h3 span{
+  color: red;
+  font-size: 45px;
+  font-family: "Lato", sans-serif;
+  
+}
+
+.home-box p{
+  color: white;
+  font-size: large;
+  margin-top: 10px;
+}
+
+/* .home-img img{
+  width: 100%;
+  height: 100%;
+} */
+
+
+.bikes-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.bike-box{
+  position: relative;
+  padding: 15px;
+  background-color:rgb(255, 247, 239);
+  border: 1px solid hsl(0deg 0% 54% / 14%);
+}
+
+.bike-box:hover{
+  box-shadow: 0 14px 16px rgb(0 0 0  / 10%);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bike-img{
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+.tag{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #28a745;
+  background: hsl(134, 61%, 41%, 0.14);
+  padding: 2px 10px;
+  border-radius: 0.5rem;
+}
+.title-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.title-data h2{
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.title-data p{
+  font-size: 0.8rem;
+  font-weight: 500;
+  color:  #868e96;
+}
+
+.bike-price{
+  color: #0d6722 ;
+  
+}
+
+.bike-price span{
+  font-size:0.7rem ;
+  color: #868e96;
+}
+
+.book-btn{
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: rgb(245, 49, 49);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.book-btn:hover{
+  background: red;
+  transition: 0.3s;
+}
+
+.work .heading{
+  align-items: center;
+}
+
+.work-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.work-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.work-box i{
+  font-size: 1.6rem;
+  color: rgb(245, 49, 49) ;
+  background: rgb(255, 247, 239);
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.work-title{
+  font-size: 1.125rem;
+  line-height: 1.3rem;
+  margin: 1.4rem 0 0 0.7rem;
+}
+
+.work-description{
+  font-size: 0.938rem;
+}
+
+.destination{
+  background: rgb(249, 246, 246);
+}
+
+.city-box{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  transition: all 508ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.city-box:hover{
+  transform: translateY(-10px);
+  transition: all 508ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.city-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  background: linear-gradient(8deg hsl(240 17% 14%/ 74%) 14%, 
+  hsl(240 17% 145 / 14%) 44%);
+  overflow: hidden;
+}
+
+.ct-title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+.city-name{
+  font-size: 1.2rem;
+}
+
+.reviews .heading{
+  align-items: center;
+}
+
+.review-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ align-items: center;
+ padding-left: 5%;
+}
+
+.rev-box{
+  padding: 15px;
+  background: rgb(249, 246, 246) ;
+  border: 1px solid hsl(0deg 0% 54% / 14%);
+}
+
+.rev-box:hover{
+  box-shadow: 0 4px 16px rgba(0, 0, 0 / 10%);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.rev-box .stars i{
+  font-size: 20px;
+  color: #ffc107;
+}
+
+.rev-box p{
+  font-size: 0.94rem;
+  margin: 1rem 0;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+}
+
+
+.profile img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-fit: center;
+  border: 1.5px solid black ;
+}
+
+.profile .name{
+  font-size: 1rem;
+
+}
+
+
+
+.profile span{
+  font-size: 0.87rem;
+ font-weight: 400;
+}
+
+.footer{
+  background:black ;
+  color: white;
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box{
+  width: 170px;
+  margin-bottom: 1rem;
+
+}
+
+.footer-box h3{
+  font-size: 1.075rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer-box p{
+  font-size: 0.948rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social a{
+  padding: 5px;
+  border: 1px solid white;
+  color: white;
+}
+
+/* .social a:hover{
+  color: white;
+  background: red;
+  transition: 0.3s all linear;
+} */
+
+.footer-box a{
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom:0.7rem ;
+}
+.footer-box a:hover{
+  color: red;
+  transition: 0.4s all ;
+}
+
+.copyright{
+  text-align: center;
+  color: white;
+  background: black;
+  padding: 30px 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+}
+
+
+/* Responsiveness */
+
+@media (max-width:1064px){
+  .container{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .heading{
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+@media (max-width:1010px){
+  .home {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  section{
+    padding: 2rem 7rem;
+  }
+
+  .home-box{
+    width: 100%;
+    left: 0;
+    line-height: 4rem;}
+  .home-box h3{
+    text-transform: capitalize;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 20px;
+   
+  
+   
+  
+  }
+  .home-box h3 span{
+    color: red;
+    font-size: 35px;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .home-box p{
+    color: white;
+    font-size: large;
+    margin-top: 5px;
+  }
+
+  
+}
+
+@media (max-width:740px){
+  .nav{
+    padding: 15px 0;
+  }
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-box{
+    width: 100%;
+    left: 0;
+    line-height: 3rem;
+ } 
+    
+   .home-box h3{
+    text-transform: capitalize;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 20px;
+   
+  
+   
+  
+  }
+  .home-box h3 span{
+    color: red;
+    font-size: 35px;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .home-box p{
+    color: white;
+    font-size: large;
+    margin-top: 5px;
+  }
+
+  section{
+    padding: 2rem 3rem;
+  }
+
+  .sign-up{
+    display: none;
+  }
+  
+  .mobile-sign-up{
+    display: initial;
+  }
+
+  .hamburger{
+    display: flex;
+  }
+ .navbar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 300px;
+  background: black;
+  padding: 20px;
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+
+ }
+ .open-menu{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+ }
+
+ .nav-link{
+  display: block;
+  margin-bottom: 1.5rem;
+
+ }
+}
+
+
+@media (max-width:570px){
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-box{
+    width: 100%;
+    left: 0;
+    line-height: 2rem;
+ } 
+    
+   .home-box h3{
+    text-transform: capitalize;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 17px;
+   
+  
+   
+  
+  }
+  .home-box h3 span{
+    color: red;
+    font-size: 27px;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .home-box p{
+    color: white;
+    font-size: large;
+    margin-top: 2px;
+  }
+
+}
+
+
+@media (max-width:400px){
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-box{
+    width: 100%;
+    left: 0;
+    line-height: 2rem;
+ } 
+    
+   .home-box h3{
+    text-transform: capitalize;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 17px;
+   
+  
+   
+  
+  }
+  .home-box h3 span{
+    color: red;
+    font-size: 27px;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .home-box p{
+    color: white;
+    font-size: large;
+    margin-top: 2px;
+  }
+
+}
+
+
+@media(max-width:350px){
+  .navbar{
+    width: 100%;
+  }
+
+
+  .rev-box{
+    position: relative;
+    right: 13%;
+  }
+
+  .work{
+    position: relative;
+    right: 7%;
+  }
+
+  .home-box{
+    width: 160%;
+    height: 100%;
+    position: relative;
+    right: 0;
+    left: -25%;
+    line-height: 2rem;
+ } 
+    
+   .home-box h3{
+    text-transform: capitalize;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 13px;
+   
+   
+  
+   
+  
+  }
+  .home-box h3 span{
+    color: red;
+    font-size: 25px;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .home-box p{
+    color: white;
+    font-size: large;
+    margin-top: 2px;
+  }
+
+}
